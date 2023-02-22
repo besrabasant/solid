@@ -1,0 +1,13 @@
+<?php
+
+namespace RogueOne\Solid\S;
+
+class Square
+{
+    public $length;
+
+    public function __construct($length)
+    {
+        $this->length = $length;
+    }
+}

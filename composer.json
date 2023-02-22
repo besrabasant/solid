@@ -1,0 +1,15 @@
+{
+    "name": "rogue-one/solid",
+    "autoload": {
+        "psr-4": {
+            "RogueOne\\Solid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Basant Besra",
+            "email": "besrabasant@gmail.com"
+        }
+    ],
+    "require": {}
+}
