@@ -13,4 +13,8 @@ $shapes = [
 
 $areas = new AreaCalculator($shapes);
 
-echo $areas->output();
+$output = new SumFormatter($areas);
+
+echo $output->JSON() . PHP_EOL;
+echo PHP_EOL;
+echo $output->HTML() . PHP_EOL;

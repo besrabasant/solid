@@ -9,9 +9,12 @@ $shapes = [
     new Circle(2),
     new Square(5),
     new Square(6),
-    // new Rectangle(6, 8),
 ];
 
 $areas = new AreaCalculator($shapes);
 
-echo $areas->output();
+$output = new SumFormatter($areas);
+
+echo $output->JSON() . PHP_EOL;
+echo PHP_EOL;
+echo $output->HTML() . PHP_EOL;

@@ -14,19 +14,13 @@ class AreaCalculator
     public function sum()
     {
         foreach ($this->shapes as $shape) {
-            $area[] = $shape->area();
+            if (is_a($shape, Square::class)) {
+                $area[] = pow($shape->length, 2);
+            } elseif (is_a($shape, Circle::class)) {
+                $area[] = pi() * pow($shape->radius, 2);
+            }
         }
 
         return array_sum($area);
-    }
-
-    public function output()
-    {
-        return implode('', [
-            '',
-            'Sum of the areas of provided shapes: ',
-            $this->sum(),
-            '',
-        ]);
     }
 }
