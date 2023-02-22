@@ -18,6 +18,8 @@ class AreaCalculator
                 $area[] = pow($shape->length, 2);
             } elseif (is_a($shape, Circle::class)) {
                 $area[] = pi() * pow($shape->radius, 2);
+            } elseif (is_a($shape, Rectangle::class)) {
+                $area[] = $shape->width * $shape->height;
             }
         }
 
