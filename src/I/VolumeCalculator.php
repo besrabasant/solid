@@ -3,7 +3,6 @@
 namespace RogueOne\Solid\I;
 
 use Exception;
-use RogueOne\Solid\D\Shape;
 
 class VolumeCalculator extends AreaCalculator
 {
@@ -15,7 +14,7 @@ class VolumeCalculator extends AreaCalculator
     public function sum()
     {
         foreach ($this->shapes as $shape) {
-            if (is_a($shape, Shape::class)) {
+            if (is_a($shape, ThreeDimensionShape::class)) {
                 $volumes[] = $shape->volume();
             } else {
                 throw new Exception("not a 3D shape");

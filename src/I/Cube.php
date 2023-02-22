@@ -2,7 +2,7 @@
 
 namespace RogueOne\Solid\I;
 
-class Cube implements Shape
+class Cube implements Shape, ThreeDimensionShape
 {
     public $length;
 

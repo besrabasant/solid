@@ -16,7 +16,11 @@ class AreaCalculator
     public function sum()
     {
         foreach ($this->shapes as $shape) {
-            $area[] = $shape->area();
+            if (is_a($shape, Shape::class)) {
+                $area[] = $shape->area();
+            } else {
+                throw new Exception("not a shape");
+            }
         }
 
         return array_sum($area);
