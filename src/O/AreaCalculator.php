@@ -14,13 +14,7 @@ class AreaCalculator
     public function sum()
     {
         foreach ($this->shapes as $shape) {
-            if (is_a($shape, Square::class)) {
-                $area[] = pow($shape->length, 2);
-            } elseif (is_a($shape, Circle::class)) {
-                $area[] = pi() * pow($shape->radius, 2);
-            } elseif (is_a($shape, Rectangle::class)) {
-                $area[] = $shape->width * $shape->height;
-            }
+            $area[] = $shape->area();
         }
 
         return array_sum($area);

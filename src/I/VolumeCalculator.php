@@ -14,11 +14,7 @@ class VolumeCalculator extends AreaCalculator
     public function sum()
     {
         foreach ($this->shapes as $shape) {
-            if (is_a($shape, ThreeDimensionShape::class)) {
-                $volumes[] = $shape->volume();
-            } else {
-                throw new Exception("not a 3D shape");
-            }
+            $volumes[] = $shape->volume();
         }
 
         return array_sum($volumes);

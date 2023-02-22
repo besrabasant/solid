@@ -2,7 +2,7 @@
 
 namespace RogueOne\Solid\I;
 
-class Sphere implements ThreeDimensionShape, Shape
+class Sphere
 {
     public $radius;
 

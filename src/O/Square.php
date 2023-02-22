@@ -10,4 +10,9 @@ class Square
     {
         $this->length = $length;
     }
+
+    public function area()
+    {
+        return pow($this->length, 2);
+    }
 }

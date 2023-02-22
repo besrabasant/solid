@@ -9,7 +9,6 @@ $shapes = [
     new Circle(2),
     new Square(5),
     new Square(6),
-    // new Water(6),
 ];
 
 $solidShapes = [

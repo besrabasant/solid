@@ -13,4 +13,9 @@ class Rectangle
         $this->width = $width;
         $this->height = $height;
     }
+
+    public function area()
+    {
+        return $this->width * $this->height;
+    }
 }
