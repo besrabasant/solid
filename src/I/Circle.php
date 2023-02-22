@@ -2,7 +2,7 @@
 
 namespace RogueOne\Solid\I;
 
-class Circle
+class Circle implements Shape
 {
     public $radius;
 

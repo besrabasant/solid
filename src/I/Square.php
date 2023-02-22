@@ -2,7 +2,7 @@
 
 namespace RogueOne\Solid\I;
 
-class Square
+class Square implements Shape
 {
     public $length;
 
