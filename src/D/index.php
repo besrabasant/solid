@@ -9,7 +9,6 @@ $shapes = [
     new Circle(2),
     new Square(5),
     new Square(6),
-    // new Water(6),
 ];
 
 $solidShapes = [
@@ -23,9 +22,10 @@ $volumes = new VolumeCalculator($solidShapes);
 
 $jsonPrinter = new JsonPrinter();
 $htmlPrinter = new HTMLPrinter();
+$xmlPrinter = new XMLPrinter();
 
-$areasFormatter = new SumFormatter($areas,  $jsonPrinter);
-$volumesFormatter = new SumFormatter($volumes, $htmlPrinter);
+$areasFormatter = new SumFormatter($areas,  $xmlPrinter);
+$volumesFormatter = new SumFormatter($volumes, $xmlPrinter);
 
 echo $areasFormatter->format() . PHP_EOL;
 echo PHP_EOL;
